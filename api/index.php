@@ -1,33 +1,9 @@
 <?php
-// Dati 
+$database_path = 'database/data.json';
 
-$actions = [
-    [
-        "text" => "Pagare il bollo",
-        "done" => false,
-    ],
-    [
-        "text" => 'Pulire la casa',
-        "done" => false,
-    ],
-    [
-        "text" => 'Fare benzina',
-        "done" => false,
-    ],
-    [
-        "text" => 'Andare in palestra',
-        "done" => false,
-    ],
-    [
-        "text" => 'Fare la spesa',
-        "done" => false,
-    ],
-    [
-        "text" => 'Pagare la multa',
-        "done" => false,
-    ],
-];
+$json_data = file_get_contents($database_path);
 
+$actions = json_decode($json_data, true);
 
 // Specifico che le informazioni sono di tipo json
 header('Content-Type: appclication/json');

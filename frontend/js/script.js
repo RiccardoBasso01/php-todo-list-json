@@ -10,6 +10,7 @@ const app = createApp({
         }
     },
     created(){
+        // Chiamata axios per recuperare i dati
         axios.get('http://localhost/esercizi/php-todo-list-json/api').then(res => {this.actions = res.data});
     },
     methods: {
