@@ -1,0 +1,104 @@
+/* Generali */
+:root {
+    --primary-color: rgb(54, 158, 109);
+}
+
+body {
+    background-color: rgb(229, 229, 229);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+}
+
+header img {
+    width: calc(65px + 1.3vw);
+}
+
+h1 {
+    background-color: var(--light-grey);
+    border-radius: 50px;
+    border: 1px solid var(--grey);
+    padding: 10px 20px;
+    color: var(--dark-grey);
+    margin: 15px 0;
+}
+
+/* Card */
+.card-header {
+    background-color: var(--primary-color);
+}
+
+.card-header img {
+    width: 50px;
+}
+
+.card-header img:hover {
+    filter: invert(100);
+}
+
+li {
+    border: 1px solid var(--grey);
+    border-left: 5px solid var(--primary-color);
+    background-color: white;
+    border-radius: 10px;
+    min-height: 60px;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Cose della lista completate */
+.done {
+    border-left: 5px solid #09e909;
+    box-shadow: 0 0 3px #09e909;
+    text-decoration: line-through;
+}
+
+/* Button */
+button {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.completed {
+    background-color: var(--light-green);
+    border: 1px solid green;
+}
+
+.completed:hover {
+    background-color: #09e909;
+    color: white;
+}
+
+.removed {
+    background-color: var(--light-red);
+    border: 1px solid red;
+}
+
+.removed:hover {
+    background-color: red;
+    color: white;
+}
+
+.newListitem {
+    background-color: var(--light-blue);
+    border: 1px solid blue;
+}
+
+.newListitem:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
+/* input */
+input:focus {
+    flex: 1 0 auto;
+}
+
+input {
+    transition: flex 1s ease-out;
+}
