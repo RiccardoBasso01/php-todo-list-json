@@ -1,5 +1,3 @@
-console.log('Vue-JS OK', Vue);
-
 const { createApp } = Vue;
 
 const app = createApp({
@@ -8,36 +6,11 @@ const app = createApp({
             newItem: '', // Viene compilato alla compilazione dell'input
             showInputElement: false, // Se true mostra l' input in pagina
             // Array di azioni da compiere
-            actions: [
-                {
-                    text: 'Pagare il bollo',
-                    done: false,
-                },
-                {
-                    text: 'Pulire la casa',
-                    done: false,
-                },
-                {
-                    text: 'Fare benzina',
-                    done: false,
-                },
-                {
-                    text: 'Andare in palestra',
-                    done: false,
-                },
-                {
-                    text: 'Fare la spesa',
-                    done: false,
-                },
-                {
-                    text: 'Pagare la multa',
-                    done: false,
-                }
-            ]
+           actions: [],
         }
     },
-    computed: {
-
+    created(){
+        axios.get('http://localhost/esercizi/php-todo-list-json/api').then(res => {this.actions = res.data});
     },
     methods: {
         // Funzione per filtarre l' array eliminando gli oggetti della lista completati
