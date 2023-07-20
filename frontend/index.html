@@ -53,9 +53,11 @@
                 <div class="card-body">
                     <ul>
                         <!-- Input per inserire un nuovo elemento alla lista -->
-                        <li v-if="showInputElement === true" class="gap-1">
-                            <input v-model.trim="newItem" @keyup.enter="addAction" type="text" placeholder="Aggiungi">
-                            <button v-on:click="addAction" class="newListitem">Invia</button>
+                        <li v-if="showInputElement === true">
+                            <form @submit.prevent(addAction)>
+                                <input v-model.trim="newItem" type="text" placeholder="Aggiungi">
+                                <button class="newListitem">Invia</button>
+                            </form>
                         </li>
                         <!-- lista delle cose da fare -->
                         <li v-for="(action, i) in actions" :class="{ done : action.done}">

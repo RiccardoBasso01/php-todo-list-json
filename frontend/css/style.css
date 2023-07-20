@@ -46,9 +46,19 @@ li {
     min-height: 60px;
     padding: 10px;
     margin-bottom: 5px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+}
+
+form{
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
 
 /* Cose della lista completate */
@@ -100,5 +110,5 @@ input:focus {
 }
 
 input {
-    transition: flex 1s ease-out;
-}
+    transition: flex 2s cubic-bezier(0, 0.75, 0.26, 0.9);
+}  
